@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(to right, #ffe6f1, #f0e9ff);
+    border-bottom: 2px solid #f5b5d7;
+    border-top: 2px solid #f5b5d7;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.menu {
+    margin-right: 10px;
+}
+
+.gradient{
+    background: linear-gradient(to right,
+        purple,
+        rgb(155, 3, 155),
+        rgb(179, 88, 179),
+        #a855f7,
+        #3b82f6,
+        blue);
+    background-clip: text ;
+    -webkit-background-clip: text;
+}
+
+
+.btn-header {
+    background-color: #f0e9ff;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.5;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.btn-header:hover {
+    opacity: 1.0;
+    background-color: #af8ccf;
+}
+
+body {
+    background-image: url("/static/images/background-Image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+#content{
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+#title{
+    font-size: 70px;
+    color: transparent;
+}
+
+#albums{
+    max-width: 70%;
+    display: grid;
+
+    margin: 30px auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.album{
+    border-radius: 20px;
+    padding: 10px;
+    text-align: left;
+
+}
+
+.album--debut{
+    border:3px solid rgb(114, 214, 172);
+    background-color: rgb(205, 250, 231);
+}
+
+.album--fearless{
+    border: 3px solid rgb(233, 219, 20);
+    background-color: rgb(248, 241, 168);
+}
+
+.album--speaknow{
+    border: 3px solid rgb(196, 45, 170);
+    background-color: rgb(243, 179, 233);
+}
+
+.album--red{
+    border: 3px solid rgb(236, 64, 64);
+    background-color: rgb(255, 204, 203);
+}
+
+.album--1989{
+    border: 3px solid rgb(76, 168, 196);
+    background-color: rgb(196, 231, 247);
+}
+
+.album--reputation{
+    border: 3px solid rgb(61, 61, 61);
+    background-color: rgb(151, 151, 151);
+}
+
+.album--lover{
+    border: 3px solid rgb(255, 105, 180);
+    background-color: rgb(247, 202, 209);
+}
+
+.album--folklore{
+    border: 3px solid rgb(93, 97, 93);
+    background-color: rgb(203, 204, 203);
+}
+
+.album--evermore{
+    border: 3px solid rgb(177, 123, 52);
+    background-color: rgb(202, 168, 105);
+}
+
+.album--midnights{
+    border: 3px solid rgb(54, 33, 89);
+    background-color: rgb(173, 153, 200);
+}
+
+.album--TTPD{
+    border: 3px solid rgb(34, 34, 34);
+    background-color: rgb(120, 120, 120);
+}
+
+.album--TLOASG{
+    border: 3px solid rgb(252, 150, 33);
+    background-color: rgb(192, 248, 229);
+}
+
+.album-images{
+    border-radius: 15px;
+    width: 260px;
+    height: 260px;
+}

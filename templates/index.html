@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title>Inicio</title>
+
+</head>
+<body>
+
+    <header class="header">
+        
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/musical-note-header.png') }}" alt="Logo musical note" class="logo" width="64" height="64">
+
+            <p class="gradient" style="font-size: 40px; font-style: normal; font-weight: 400;font-family: 'MonteCarlo', cursive; 
+            color: transparent; padding-right: 5px" >Taylor Swift</p>
+        </div>
+        
+            
+        <nav class="menu">
+            <a href="{{ url_for('index') }}" class="btn-header">Início</a>
+            <a href="{{ url_for('albums') }}" class="btn-header">Álbuns</a>
+            <a href="{{ url_for('favorite_songs') }}" class="btn-header">Músicas Favoritas</a>
+        </nav>
+
+    </header>
+
+
+    <div id="content">
+        <h1 id="title", class="gradient">Taylor Swift</h1>
+
+        <p style="font-family: 'Quicksand', sans-serif; font-optical-sizing: auto; font-size: 20px; font-style: normal;
+        color: rgb(68, 65, 65);"> Uma jornada mágica através das eras de uma das artistas mais icônicas <br>
+        e influentes da música contemporânea ✨</p>
+        
+        <a id="btn-explore-eras" href="{{ url_for('albums')}}">Explore as Eras</a>
+
+
+    </div>
+    
+</body>
+</html>
