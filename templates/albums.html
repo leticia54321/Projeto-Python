@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='albums.css')}}">
 
     <!-- Google Fonts -->
@@ -34,79 +36,71 @@
     </header>
     <div id="content">
         <h1 id="title" class="gradient">Discografia Completa</h1>
-        <p style="font-family: 'Quicksand', sans-serif; font-optical-sizing: auto; font-size: 20px; font-style: normal;
-        color: rgb(68, 65, 65);">Explore a jornada musical de Taylor Swift através de suas eras!✨</p>
+        <p class="paragraph">Explore a jornada musical de Taylor Swift através de suas eras!✨</p>
         <div id="albums">
 
 
-            <div class="album album--debut">
+            <a href="{{ url_for('album_page', album='debut')}}" class="album album--debut">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/debut-img.jpg')}}" alt="album debut" 
                 style="border-radius: 8px;">
-                <p>Taylor Swift - Debut</p>
+                <p class="paragraph" style="font-weight: bold;">Taylor Swift - Debut</p>
                 <p>2006</p>
 
-            </div>
+            </a>
 
 
-            <div class="album album--fearless">
+            <a href="{{ url_for('album_page', album='fearless')}}" class="album album--fearless">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/fearless-img.png')}}" alt="album fearless" >
-                <p style="font-family: 'Quicksand', sans-serif; font-optical-sizing: auto; font-size: 20px; font-style: normal;
-        color: rgb(32, 32, 32); font-weight: bold;">Fearless</p>
+                <p class="paragraph" style="font-weight: bold;">Fearless</p>
                 <p>2008</p>
-            </div>
+            </a>
 
 
             
-            <div class="album album--speaknow">
+            <a href="{{ url_for('album_page', album='speakNow')}}" class="album album--speaknow">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/speaknow-img.jpg')}}" alt="album speaknow" >
-                <p>Taylor Swift - Speak Now</p>
+                <p class="paragraph" style="font-weight: bold;">Taylor Swift - Speak Now</p>
                 <p>2010</p>
-            </div>
+            </a>
 
-
-            <div class="album album--red">
+            <a href="{{ url_for('album_page', album='red')}}" class="album album--red">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/red-img.jpg')}}" alt="album red" >
-            </div>
+            </a>
 
-
-            <div class="album album--1989">
+            <a href="{{ url_for('album_page', album='nineteenEightyNine')}}" class="album album--1989">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/1989-img.jpg')}}" alt="album 1989" >
-            </div>
+            </a>
 
-
-            <div class="album album--reputation">
+            <a href="{{ url_for('album_page', album='reputation')}}" class="album album--reputation">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/reputation-img.jpg')}}" alt="album reputation" >    
-            </div>
+            </a>
 
 
-            <div class="album album--lover">
+            <a href="{{ url_for('album_page', album='lover')}}" class="album album--lover">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/lover-img.jpg')}}" alt="album lover" >    
-            </div>
+            </a>
 
-
-            <div class="album album--folklore">
+            <a href="{{ url_for('album_page', album='folklore')}}" class="album album--folklore">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/folklore-img.jpg')}}" alt="album folklore" >
-            </div>
+            </a>
 
 
-            <div class="album album--evermore">
+            <a href="{{ url_for('album_page', album='evermore')}}" class="album album--evermore">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/evermore-img.jpg')}}" alt="album evermore" >
-            </div>
+            </a>
 
-
-            <div class="album album--midnights">
+            <a href="{{ url_for('album_page', album='midnights')}}" class="album album--midnights">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/midnights-img.jpg')}}" alt="album midnights" >
-            </div>
+            </a>
 
 
-            <div class="album album--TTPD">
+            <a href="{{ url_for('album_page', album='TTPD')}}" class="album album--TTPD">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/TTPD-img.jpg')}}" alt="album TTPD" >
-            </div>
+            </a>
 
-
-            <div class="album album--TLOASG">
+            <a href="{{ url_for('album_page', album='TLOASG')}}" class="album album--TLOASG">
                 <img class="album-images" src="{{ url_for('static', filename='images/albums/TLOASG-img.png')}}" alt="album TLOASG" >
-            </div>
+            </a>
 
 
         </div>

@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.gradient{
+    background: linear-gradient(to right,
+        purple,
+        rgb(155, 3, 155),
+        rgb(179, 88, 179),
+        #a855f7,
+        #3b82f6,
+        blue);
+    background-clip: text ;
+    -webkit-background-clip: text;
+}
+
+
+body {
+    background-image: url("/static/images/background-Image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+#title {
+    font-size: 45px;
+    color: rgb(219, 70, 194);
+}
+
+
+#content{
+    background-color: rgba(255, 255, 255, 0.082);
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 20px 0px rgb(212, 212, 212);
+    text-align: center;
+    padding: 30px;
+}
+
+.favorite-songs-intro {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    
+}
+
+#btn-addMusic {
+    color: white;
+    font-size: 22px;
+    background-color: rgb(238, 130, 171);
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#btn-addMusic .icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  color: #f472b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

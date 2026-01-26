@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, abort, render_template
 
 app = Flask(__name__)
 
@@ -14,6 +14,12 @@ def albums():
 def favorite_songs():
     return render_template('favorite-songs.html')
 
+@app.route('/albums/<album>')
+def album_page(album):
+    try:
+        return render_template(f'each-album/{album}.html')
+    except:
+        abort(404)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -16,6 +16,7 @@
     background: linear-gradient(to right, #ffe6f1, #f0e9ff);
     border-bottom: 2px solid #f5b5d7;
     border-top: 2px solid #f5b5d7;
+    flex-wrap: nowrap;
 }
 
 .logo {
@@ -23,10 +24,12 @@
     align-items: center;
     gap: 10px;
     margin-left: 10px;
+    white-space: nowrap;
 }
 
 .menu {
     margin-right: 10px;
+    display: flex;
 }
 
 .gradient{
@@ -41,26 +44,6 @@
     -webkit-background-clip: text;
 }
 
-
-.btn-header {
-    background-color: #f0e9ff;
-    border: none;
-    color: black;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 20px;
-    opacity: 0.5;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 12px;
-}
-
-.btn-header:hover {
-    opacity: 1.0;
-    background-color: #af8ccf;
-}
 
 body {
     background-image: url("/static/images/background-Image.jpg");
