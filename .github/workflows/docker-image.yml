@@ -6,6 +6,9 @@ on:
       - 'v*.*.*'   # dispara apenas em versões semânticas
 
 jobs:
+  test:
+    uses: ./.github/workflows/python-tests.yml
+
   build-and-push:
     runs-on: ubuntu-latest
 
