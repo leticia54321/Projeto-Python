@@ -1,9 +1,10 @@
 name: Docker Image Release
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'   # dispara apenas em versões semânticas
+  workflow_run:
+    workflows: ["Docker Image Release"]
+    types:
+      - completed
 
 jobs:
   build-and-push:
