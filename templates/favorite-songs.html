@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='global.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='favorite-songs.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/favorite-songs.css')}}">
     <title>Favorite Songs</title>
 
     <!-- Google Fonts -->
@@ -38,11 +38,25 @@
         <div class="favorite-songs-intro">
             <h2 id="title">Suas Músicas Favoritas</h2>
             <p class="paragraph">Adicione, edite ou remova suas músicas favoritas da Taylor Swift.</p>
-            <a id="btn-addMusic" href=""><span class="icon">+</span>Adicionar Música</a>
+            <a class="btn-addMusic" data-modal="modal-1" ><span class="icon">+</span>Adicionar Música</a>
+
+            <dialog id="modal-1">
+                <form>
+                    <div class="model-header">
+                        <h1 class="modal-title">Adicionar nova música</h1>
+                        <a class="btn-closeModal" data-modal="modal-1">X</a>
+                    </div>
+                    
+
+
+
+                </form>
+
+            </dialog>
         </div>
         
 
     </div>
-
+    <script src="{{ url_for('static', filename='js/favorite-songs.js') }}"></script>
 </body>
 </html>
