@@ -2,7 +2,7 @@ name: Docker Image Release
 
 on:
   workflow_run:
-    workflows: ["Docker Image Release"]
+    workflows: ["Python application"]
     types:
       - completed
 
