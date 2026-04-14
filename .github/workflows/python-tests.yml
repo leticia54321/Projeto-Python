@@ -2,9 +2,10 @@ name: Python application
 
 on:
   push:
-    tags:
-      - 'v*.*.*'   # dispara apenas em versões semânticas
-
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
 permissions:
   contents: read
 

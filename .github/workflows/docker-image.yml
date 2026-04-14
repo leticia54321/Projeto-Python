@@ -1,10 +1,9 @@
 name: Docker Image Release
 
 on:
-  workflow_run:
-    workflows: ["Python application"]
-    types:
-      - completed
+  push:
+    tags:
+      - 'v*.*.*'   # dispara apenas em versões semânticas
 
 jobs:
   build-and-push:
