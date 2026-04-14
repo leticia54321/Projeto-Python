@@ -1,0 +1,29 @@
+name: Deploy to OCI
+
+on:
+  workflow_run:
+    workflows: ["Docker Image Release"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Executar deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.OCI_HOST }}
+          username: ${{ secrets.OCI_USER }}
+          key: ${{ secrets.OCI_SSH_KEY }}
+          script: |
+            docker pull ${{ secrets.DOCKER_USERNAME }}/my-image:latest
+
+            docker stop my-container || true
+            docker rm my-container || true
+
+            docker run -d \
+              -p 80:5000 \
+              --name my-container \
+              ${{ secrets.DOCKER_USERNAME }}/my-image:latest
