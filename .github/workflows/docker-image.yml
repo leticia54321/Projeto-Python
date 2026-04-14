@@ -25,13 +25,13 @@ jobs:
 
       - name: Build da imagem
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/my-image:${{ steps.version.outputs.VERSION }} .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/taylor-python:${{ steps.version.outputs.VERSION }} .
 
       - name: Push versão
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/my-image:${{ steps.version.outputs.VERSION }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/taylor-python:${{ steps.version.outputs.VERSION }}
 
       - name: Atualizar latest
         run: |
-          docker tag ${{ secrets.DOCKER_USERNAME }}/my-image:${{ steps.version.outputs.VERSION }} ${{ secrets.DOCKER_USERNAME }}/my-image:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/my-image:latest
+          docker tag ${{ secrets.DOCKER_USERNAME }}/taylor-python:${{ steps.version.outputs.VERSION }} ${{ secrets.DOCKER_USERNAME }}/taylor-python:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/taylor-python:latest
