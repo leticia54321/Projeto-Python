@@ -1,0 +1,31 @@
+name: Rollback Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Versão para rollback'
+        required: true
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy versão específica
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.OCI_HOST }}
+          username: ${{ secrets.OCI_USER }}
+          key: ${{ secrets.OCI_SSH_KEY }}
+          passphrase: ${{ secrets.OCI_SSH_PASSPHRASE }}
+          script: |
+            docker pull ${{ secrets.DOCKER_USERNAME }}/taylor-python:${{ github.event.inputs.version }}
+
+            docker stop app-taylor || true
+            docker rm app-taylor || true
+
+            docker run -d \
+              -p 80:5000 \
+              --name app-taylor \
+              ${{ secrets.DOCKER_USERNAME }}/taylor-python:${{ github.event.inputs.version }}
